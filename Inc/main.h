@@ -40,12 +40,12 @@
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/
-#define PERIOD 1000
+#define PERIOD 100
 
-#define U_EM_RX_Pin GPIO_PIN_13
-#define U_EM_RX_GPIO_Port GPIOC
-#define U_EM_TX_Pin GPIO_PIN_0
-#define U_EM_TX_GPIO_Port GPIOC
+#define IO_USART_TX_Pin GPIO_PIN_0
+#define IO_USART_TX_GPIO_Port GPIOC
+#define IO_USART_RX_Pin GPIO_PIN_1
+#define IO_USART_RX_GPIO_Port GPIOC
 #define LED2_Pin GPIO_PIN_8
 #define LED2_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
