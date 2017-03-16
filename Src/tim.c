@@ -36,7 +36,7 @@
 #include "tim.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "io_usart.h"
 /* USER CODE END 0 */
 
 TIM_HandleTypeDef htim2;
@@ -181,18 +181,21 @@ uint32_t tim3Count;
   * @param  htim : TIM handle
   * @retval None
   */
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   if(htim==&htim2){
-	  if(tim2Count++>60000){
-		  tim2Count=0;
-		  printf("htim2\r\n");
-	  }
+	  TIM_RX_Callback();
+//	  if(tim2Count++>60000){
+//		  tim2Count=0;
+//		  printf("htim2\r\n");
+//	  }
   }else if(htim==&htim3){
 
   }
 
 }
+
 /* USER CODE END 1 */
 
 /**

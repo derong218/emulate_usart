@@ -39,7 +39,7 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "io_usart.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -86,8 +86,8 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
-  HAL_TIM_Base_Start_IT(&htim2);
-  HAL_TIM_Base_Start_IT(&htim3);
+  IO_Usart_Init();
+  //HAL_TIM_Base_Start_IT(&htim3);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -95,9 +95,10 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
-
-	  //HAL_Delay(1000);
-	  //HAL_GPIO_TogglePin(LED2_GPIO_Port,LED2_Pin);
+	  //HAL_Delay(1);
+	  io_usart_real_main();
+	 // HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(LED2_GPIO_Port,LED2_Pin);
   /* USER CODE BEGIN 3 */
 
   }

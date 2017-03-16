@@ -40,7 +40,7 @@
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/
-#define PERIOD 100
+#define PERIOD 50
 
 #define IO_USART_TX_Pin GPIO_PIN_0
 #define IO_USART_TX_GPIO_Port GPIOC
@@ -49,6 +49,7 @@
 #define LED2_Pin GPIO_PIN_8
 #define LED2_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
+#define RX_BIT_DATA HAL_GPIO_ReadPin(IO_USART_TX_GPIO_Port,IO_USART_RX_Pin)
 
 /* USER CODE END Private defines */
 
